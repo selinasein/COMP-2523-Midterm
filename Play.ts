@@ -4,7 +4,7 @@ import { Song } from "./Song";
 
 export class Play {
   private _name: string;
-  private _listOfSongs: Song[];
+  private _listOfSongs: Song[] = [];
 
   constructor(name: string) {
     this._name = name;

@@ -27,7 +27,9 @@ let localPlaylist = localPlaylistImporter.importPlayList();
 let cloudPlaylist = cloudPlaylistImporter.importPlayList();
 
 let user = new User("john123", "password123");
+user.addAlbum(album);
 
+user.addPlaylist(playlist);
 user.addPlaylist(localPlaylist);
 user.addPlaylist(cloudPlaylist);
 
@@ -35,7 +37,9 @@ console.log("Getting Playlist...");
 console.log(user.playlist);
 
 console.log("Getting Albums...");
-console.log(user.album);
+console.log(user.getAlbums());
 
 console.log("Getting Songs...");
-console.log(user.getAlbums());
+user.getSongs()?.forEach((songObj: Song) => {
+  console.log(songObj.title);
+});

@@ -5,7 +5,7 @@ export class Album {
   private _title: string;
   private _artist: Artist;
   private _year: number;
-  private _tracks: Song[];
+  private _tracks: Song[] = [];
 
   constructor(titleOfAlbum: string, artist: Artist, year: number) {
     this._title = titleOfAlbum;

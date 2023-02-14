@@ -2,7 +2,7 @@ import { Album } from "./Album";
 
 export class Artist {
   private _name: string;
-  private _albums: Album[];
+  private _albums: Album[] = [];
 
   constructor(artistName: string) {
     this._name = artistName;

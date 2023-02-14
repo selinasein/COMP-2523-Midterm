@@ -4,8 +4,8 @@ import { Album } from "./Album";
 export class User {
   private _username: string;
   private _password: string;
-  private _playlist: Play[];
-  private _album: Album[];
+  private _playlist: Play[] = [];
+  private _album: Album[] = [];
 
   constructor(username: string, password: string) {
     this._username = username;
@@ -37,19 +37,16 @@ export class User {
   }
 
   addPlaylist(playlist: Play) {
-    const addedPlaylist = [];
-    addedPlaylist.push(this._playlist);
-    addedPlaylist.push(playlist);
-    return addedPlaylist;
+    this._playlist.push(playlist);
   }
 
   getAlbums() {
     return this._album;
   }
 
-  set album(album: Album[]) {
-    this._album = album;
-  }
+  // set album(album: Album[]) {
+  //   this._album = album;
+  // }
 
   addAlbum(album: Album) {
     this._album.push(album);

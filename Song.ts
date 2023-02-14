@@ -5,11 +5,11 @@ export class Song {
     this._title = title;
   }
 
-  get song() {
+  get title() {
     return this._title;
   }
 
-  set song(title: string) {
+  set title(title: string) {
     this._title = title;
   }
 }
